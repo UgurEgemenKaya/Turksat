@@ -1,1 +1,0 @@
-{"uuid":"be0781a7-10eb-4acd-8b84-55fa3987114b","name":"Turksat","children":["125eb3e6-1785-4581-b547-e6e3a44635ec"],"befores":[{"name":"beforeTest","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1691592965651,"stop":1691592965687}],"afters":[],"start":1691592965595,"stop":1691593055995}

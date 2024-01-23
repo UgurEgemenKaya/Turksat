@@ -14,7 +14,7 @@ import java.io.IOException;
         features = {"src/test/resources/features"},
         glue = {"steps","util"},
         tags = "@Turksat",
-        plugin= {"pretty"}
+        plugin= {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}
 )
 public class TestRunner extends AbstractTestNGCucumberTests {
 
@@ -24,17 +24,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
         return super.scenarios();
     }
 
-
-    // Test sonuçlarının Allure raporunu alabilmek için, alttaki satırları comment-out yapabilirsiniz.
-    // Öncelikle bilgisayarınızda Scoop ve Allure olmalıdır.
-    // Scoop kurmak için windows powershell yardımı ile "irm get.scoop.sh | iex " komutunu çalıştırmanız gerekmektedir.
-    /*
-       Scoop kurulduktan sonra, Allure yüklemek için windows powershellde
-       "scoop install allure" komutunu çalıştırmanız ve ardından allure'u system path'e eklemeniz gerekmektedir.
-
-     */
-
-
     @BeforeTest
     public void beforeTest() {
         try {
@@ -43,12 +32,12 @@ public class TestRunner extends AbstractTestNGCucumberTests {
             e.printStackTrace();
         }
     }
-//    @AfterTest
-//    public void afterTest(){
-//        try {
-//            Runtime.getRuntime().exec("cmd /c start \" \" allure serve allure-results");
-//        }catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
+    @AfterTest
+    public void afterTest(){
+        try {
+            Runtime.getRuntime().exec("cmd /c start \" \" allure serve allure-results");
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
