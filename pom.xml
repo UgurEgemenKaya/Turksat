@@ -37,9 +37,6 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
-                    <argLine>
-                        -javaagent:"C:\Users\egeme\.m2\repository\org\aspectj\aspectjweaver\1.9.7\aspectjweaver-1.9.7.jar"
-                    </argLine>
                 </configuration>
                 <dependencies>
                     <dependency>
